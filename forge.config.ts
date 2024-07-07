@@ -19,7 +19,7 @@ const config: ForgeConfig = {
       config: {
         repository: {
           owner: 'Veasna WP',
-          name: 'mmo-tools'
+          name: 'electron-auto-update'
         },
         // prerelease: true
       }
