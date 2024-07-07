@@ -18,10 +18,12 @@ const config: ForgeConfig = {
       name: '@electron-forge/publisher-github',
       config: {
         repository: {
-          owner: 'Veasna WP',
+          owner: 'veasnawp',
           name: 'electron-auto-update'
         },
-        // prerelease: true
+        // prerelease: true,
+        // draft: process.env.PUBLISHER_GITHUB_DRAFT,
+        // prerelease: process.env.PUBLISHER_GITHUB_PRERELEASE,
       }
     }
   ],
