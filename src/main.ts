@@ -1,6 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
 import { updateElectronApp, UpdateSourceType } from 'update-electron-app';
+import logger from 'electron-log'
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -56,9 +57,11 @@ app.on('activate', () => {
 
 updateElectronApp({
   updateSource: {
+    host: 'https://github.com',
     type: UpdateSourceType.ElectronPublicUpdateService,
     repo: 'veasnawp/electron-auto-update'
   },
   updateInterval: '5 minutes',
-  logger: require('electron-log')
+  logger: logger,
+  notifyUser: true
 }); // additional configuration options available
